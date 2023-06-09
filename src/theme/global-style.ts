@@ -28,4 +28,7 @@ export const globalStyle: SystemStyleObject = {
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
   },
+  nav: {
+    border: 'none !important'
+  }
 };
