@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { CtfImage } from '@src/components/features/contentful/ctf-image';
-import { FormatCurrency } from '@src/components/shared/format-currency';
 import { PageProductFieldsFragment } from '@src/lib/__generated/sdk';
 
 export const ProductTile = ({
@@ -24,9 +23,7 @@ export const ProductTile = ({
           </Box>
         )}
         {price && (
-          <Text {...inspectorProps({ fieldId: 'price' })} mt={3} fontWeight="500">
-            <FormatCurrency value={price} />
-          </Text>
+          <Text {...inspectorProps({ fieldId: 'price' })} mt={3} fontWeight="500" />
         )}
       </Box>
     </div>

@@ -11,8 +11,8 @@ import {
   Button,
 } from '@chakra-ui/react';
 import { LanguageIcon } from '@contentful/f36-icons';
-import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import { useRef } from 'react';
 
 export const LanguageSelectorMobile = ({ displayName, localeName }) => {

@@ -3,18 +3,16 @@ import { useContentfulInspectorMode } from '@contentful/live-preview/react';
 import { useRouter } from 'next/router';
 
 import { CtfImage } from '@src/components/features/contentful/ctf-image';
-import { FormatCurrency } from '@src/components/shared/format-currency';
-import { QuantitySelector } from '@src/components/shared/quantity-selector';
 import { PageProductFieldsFragment } from '@src/lib/__generated/sdk';
 
+
 export const ProductDetails = ({
-  name,
-  price,
-  description,
-  featuredProductImage,
-  productImagesCollection,
-  sys: { id: entryId },
-}: PageProductFieldsFragment) => {
+                                 name,
+                                 description,
+                                 featuredProductImage,
+                                 productImagesCollection,
+                                 sys: { id: entryId },
+                               }: PageProductFieldsFragment) => {
   const theme = useTheme();
   const { locale } = useRouter();
   const inspectorProps = useContentfulInspectorMode({ entryId, locale });
@@ -58,18 +56,22 @@ export const ProductDetails = ({
             <Heading {...inspectorProps({ fieldId: 'name' })} as="h1" variant="h3">
               {name}
             </Heading>
-            {price && (
-              <Text {...inspectorProps({ fieldId: 'price' })} mt={1} fontWeight="500">
-                <FormatCurrency value={price} />
-              </Text>
-            )}
+            <h2>Booking Info:</h2>
+
+            <Text {...inspectorProps({ fieldId: 'price' })} mt={1} fontWeight="500">
+              <a>
+                Telephone: +39 3279737011 Armando
+              </a>
+              <a>
+                WhatsApp: +39 3516571492 Larry
+              </a>
+              <a href={'https://instagram.com/salaboatservice'}> Instagram: @saloboatservice</a>
+            </Text>
             <Text {...inspectorProps({ fieldId: 'description' })} mt={5} color={theme.f36.gray700}>
               {description}
             </Text>
 
-            <Box mt={{ base: 5, lg: 10 }}>
-              <QuantitySelector />
-            </Box>
+            <Box mt={{ base: 5, lg: 10 }} />
           </Box>
         </GridItem>
       </Grid>

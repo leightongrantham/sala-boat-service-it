@@ -17,11 +17,13 @@ export const ProductTileGrid = ({ title, products }: ProductTileGridProps) => {
         </Heading>
       )}
       <Grid
-        templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
+        templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(1, 1fr)' }}
         rowGap={{ base: 6, lg: 6 }}
         columnGap={{ base: 4, lg: 24 }}>
         {products.map((product, index) => {
-          return <GridItem key={index}>{product ? <ProductTile {...product} /> : null}</GridItem>;
+          return <GridItem _hover={{ opacity: 0.75, transition:  'all 0.25s ease' }} key={index}>
+            {product ? <ProductTile {...product} /> : null}
+          </GridItem>;
         })}
       </Grid>
     </Container>

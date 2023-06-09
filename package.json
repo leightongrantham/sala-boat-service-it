@@ -78,7 +78,8 @@
     "i18next-http-backend": "^1.4.4",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
+    "react-router-dom": "^6.11.2",
     "typescript": "4.9.3",
-    "typescript-graphql-request": "^4.4.6"
+    "typescript-graphql-request": "^4.4.5"
   }
 }

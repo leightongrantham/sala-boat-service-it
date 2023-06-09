@@ -2,15 +2,16 @@
   "common": {
     "homepage": "Homepage",
     "logoImageAltText": "Logo",
-    "aboutUs": "about us",
-    "description1": "Founded in 1984 by designer Chantelle West, we've always believed in the power of locally made goods.",
-    "description2": "The quality of the craftsmanship and the local artisans we employ are what make Luxette our mission in life.",
+    "aboutUs": "About Us",
+    "description1": "Salò Boat Service is the new daughter of the historical company Consolini Boat Service born in 1930.",
+    "description2": "\n\n\nThe Consolini family has run passionately for more than 90 years the longest active boat service on Lake Garda, the marvellous “Benacus” known to be the biggest and prettiest lake in Italy.",
+    "description3": "Salò Boat Service has now the objective to bring on the shores of Garda the most qualitative service, with avant garde technological boats that meet the most luxurious standard of Italian hand-craft. ",
     "poweredBy": "Powered by",
     "regionalSettings": "Regional Settings",
     "language": "Language"
   },
   "product": {
-    "trendingProducts": "Trending now",
+    "trendingProducts": "Our fleet",
     "relatedProducts": "You may also like",
     "addToCart": "Add to cart",
     "quantity": "Quantity"

@@ -1,4 +1,4 @@
-import { Container, Box, Text, Link, useTheme } from '@chakra-ui/react';
+import { Container, Box, Text, useTheme } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 
 export const Footer = () => {
@@ -14,15 +14,10 @@ export const Footer = () => {
       borderTop="1px"
       borderColor={theme.f36.gray200}>
       <Container>
-        <Text mb={8}>{t('common.aboutUs')}</Text>
+        <Text fontSize={25} mb={8}>{t('common.aboutUs')}</Text>
         <Text>{t('common.description1')}</Text>
-        <Text mb={8}>{t('common.description2')}</Text>
-        <Text variant="small">
-          {t('common.poweredBy')}{' '}
-          <Link href="https://contentful.com" isExternal color={theme.f36.blue500}>
-            Contentful
-          </Link>
-        </Text>
+        <Text>{t('common.description2')}</Text>
+        <Text mb={8}>{t('common.description3')}</Text>
       </Container>
     </Box>
   );

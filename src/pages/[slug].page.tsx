@@ -1,16 +1,15 @@
 import { Box } from '@chakra-ui/react';
 import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
-import { ProductDetails, ProductTileGrid } from '@src/components/features/product';
+import { ProductDetails } from '@src/components/features/product';
 import { SeoFields } from '@src/components/features/seo';
 import { client, previewClient } from '@src/lib/client';
 import { getServerSideTranslations } from '@src/pages/utils/get-serverside-translations';
 
 const Page = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  const { t } = useTranslation();
   const { locale } = useRouter();
   const product = useContentfulLiveUpdates(props.product, locale || '');
 
@@ -25,10 +24,10 @@ const Page = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => 
             md: 9,
             lg: 16,
           }}>
-          <ProductTileGrid
-            title={t('product.relatedProducts')}
-            products={product.relatedProductsCollection.items}
-          />
+          {/*<ProductTileGrid*/}
+          {/*  title={t('product.relatedProducts')}*/}
+          {/*  products={product.relatedProductsCollection.items}*/}
+          {/*/>*/}
         </Box>
       )}
     </>

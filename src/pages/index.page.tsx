@@ -1,8 +1,8 @@
 import { Box } from '@chakra-ui/react';
 import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 import { HeroBanner } from '@src/components/features/hero-banner';
 import { ProductTileGrid } from '@src/components/features/product';

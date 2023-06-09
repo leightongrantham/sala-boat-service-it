@@ -1,6 +1,14 @@
 import { SystemStyleObject } from '@chakra-ui/react';
 import tokens from '@contentful/f36-tokens';
 
+// const CrimsonText = localFont({
+//   src: [
+//     {
+//       path: './utils/fonts/CrimsonText-Regular.ttf'
+//     },
+//   ]
+// })
+
 export const globalStyle: SystemStyleObject = {
   'html, body': {
     display: 'flex',

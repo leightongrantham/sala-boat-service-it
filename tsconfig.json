@@ -18,7 +18,7 @@
     "paths": {
       "@public/*": ["./public/*"],
       "@src/*": ["./src/*"],
-      "@icons/*": ["./public/assets/svg/*"]
+      "@icons/*": ["./public/assets/*"]
     },
     "typeRoots": ["./@types", "./node_modules/@types", "./types"],
     "lib": ["dom", "dom.iterable", "esnext"],
