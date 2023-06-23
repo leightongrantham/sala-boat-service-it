@@ -62,9 +62,11 @@ export const ProductDetails = ({
               <a>
                 Telephone: +39 3279737011 Armando
               </a>
+              <br/>
               <a>
                 WhatsApp: +39 3516571492 Larry
               </a>
+              <br/>
               <a href={'https://instagram.com/salaboatservice'}> Instagram: @saloboatservice</a>
             </Text>
             <Text {...inspectorProps({ fieldId: 'description' })} mt={5} color={theme.f36.gray700}>

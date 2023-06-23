@@ -17,7 +17,9 @@ export const Footer = () => {
         <Text fontSize={25} mb={8}>{t('common.aboutUs')}</Text>
         <Text>{t('common.description1')}</Text>
         <Text>{t('common.description2')}</Text>
-        <Text mb={8}>{t('common.description3')}</Text>
+        <Text>{t('common.description3')}</Text>
+        <Text>{t('common.description4')}</Text>
+        <Text mb={8}>{t('common.description5')}</Text>
       </Container>
     </Box>
   );

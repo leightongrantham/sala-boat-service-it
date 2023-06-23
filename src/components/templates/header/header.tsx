@@ -1,5 +1,4 @@
 import { Box, BoxProps, Flex } from '@chakra-ui/react';
-import localFont from '@next/font/local';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -11,9 +10,6 @@ export const HEADER_HEIGHT = 60;
 export const Header = (props: BoxProps) => {
   const { t } = useTranslation();
   const route = useRouter();
-
-
-  console.log(route.pathname);
 
   return (
     <Flex
@@ -30,11 +26,11 @@ export const Header = (props: BoxProps) => {
       <Link href="/" title={t('common.homepage')}>
         {route.pathname === '/' ? (
           <h1 style={{ fontSize: '1.5rem', fontFamily: `../../../pages/utils/fonts/../../../pages/utils/fonts/CrimsonText-regular.ttf !important`, textTransform: 'uppercase', letterSpacing: '5px', marginTop: '2rem' }}>
-            Sala Boat Service
+            Saló Boat Service
           </h1>
         ) : (
           <h1 style={{ fontSize: '1.5rem', fontFamily: `../../../pages/utils/fonts/../../../pages/utils/fonts/CrimsonText-regular.ttf !important`, textTransform: 'uppercase', letterSpacing: '5px', color: 'black', marginTop: '2rem'  }}>
-            Sala Boat Service
+            Saló Boat Service
           </h1>
         )}
 
