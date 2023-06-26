@@ -34,11 +34,15 @@ export const Header = (props: BoxProps) => {
           </h1>
         )}
 
+
+        {/*<h2>Our Fleet</h2>*/}
+
         <Box
           display={{ base: 'block', md: 'none', lg: 'none' }}
           title={t('common.logoImageAltText')}
         />
       </Link>
+      {/*<Link href="/experiences/">Our Experiences</Link>*/}
       <LanguageSelector />
     </Flex>
   );

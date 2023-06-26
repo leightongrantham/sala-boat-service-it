@@ -13,6 +13,7 @@ export default function Document() {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
         <meta name="theme-color" content="#ffffff" />
+        <meta name="google-site-verification" content="7LJm2EkZOIs0HWK86BXpHkgjGfu4G5xOL3C2jfoqU2o" />
       </Head>
       <body>
         <Main />
