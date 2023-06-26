@@ -26,11 +26,11 @@ export const Header = (props: BoxProps) => {
       <Link href="/" title={t('common.homepage')}>
         {route.pathname === '/' ? (
           <h1 style={{ fontSize: '1.5rem', fontFamily: `../../../pages/utils/fonts/../../../pages/utils/fonts/CrimsonText-regular.ttf !important`, textTransform: 'uppercase', letterSpacing: '5px', marginTop: '2rem' }}>
-            Saló Boat Service
+            Salò Boat Service
           </h1>
         ) : (
           <h1 style={{ fontSize: '1.5rem', fontFamily: `../../../pages/utils/fonts/../../../pages/utils/fonts/CrimsonText-regular.ttf !important`, textTransform: 'uppercase', letterSpacing: '5px', color: 'black', marginTop: '2rem'  }}>
-            Saló Boat Service
+            Salò Boat Service
           </h1>
         )}
 
