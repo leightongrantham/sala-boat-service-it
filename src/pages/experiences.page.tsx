@@ -14,24 +14,23 @@ const Page = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => 
   const { t } = useTranslation();
   const { locale } = useRouter();
   const page = useContentfulLiveUpdates(props.page, locale || '');
-
-  console.log(page);
+  const items = page.productsCollection.items.filter((item) => item.experience === true);
 
   return (
     <>
       {page.seoFields && <SeoFields {...page.seoFields} />}
       <HeroBanner {...page} />
-      {page.productsCollection?.items && (
+      {items && (
         <Box
           mt={{
             base: 5,
             md: 9,
             lg: 16,
           }}>
-          {/*<ProductTileGrid*/}
-          {/*  title={t('product.trendingProducts')}*/}
-          {/*  products={page.experiencesCollection.items}*/}
-          {/*/>*/}
+          <ProductTileGrid
+            title={t('product.trendingProducts2')}
+            products={items}
+          />
         </Box>
       )}
     </>
@@ -45,8 +44,6 @@ export const getServerSideProps: GetServerSideProps = async ({ locale, preview }
     const data = await gqlClient.pageLanding({ locale, preview });
 
     const page = data.pageLandingCollection?.items[0];
-
-    console.log('hello', page);
 
     if (!page) {
       return {

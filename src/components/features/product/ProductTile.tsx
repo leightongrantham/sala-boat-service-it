@@ -22,9 +22,6 @@ export const ProductTile = ({
             <CtfImage {...featuredProductImage} />
           </Box>
         )}
-        {price && (
-          <Text {...inspectorProps({ fieldId: 'price' })} mt={3} fontWeight="500" />
-        )}
       </Box>
     </div>
   ) : null;

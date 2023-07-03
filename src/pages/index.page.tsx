@@ -14,12 +14,13 @@ const Page = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => 
   const { t } = useTranslation();
   const { locale } = useRouter();
   const page = useContentfulLiveUpdates(props.page, locale || '');
+  const items = page.productsCollection.items.filter((item) => item.experience !== true);
 
   return (
     <>
       {page.seoFields && <SeoFields {...page.seoFields} />}
       <HeroBanner {...page} />
-      {page.productsCollection?.items && (
+      {items && (
         <Box
           mt={{
             base: 5,
@@ -28,7 +29,7 @@ const Page = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => 
           }}>
           <ProductTileGrid
             title={t('product.trendingProducts')}
-            products={page.productsCollection.items}
+            products={items}
           />
         </Box>
       )}

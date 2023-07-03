@@ -30,5 +30,8 @@ export const globalStyle: SystemStyleObject = {
   },
   nav: {
     border: 'none !important'
+  },
+  '.active': {
+    opacity: 0.5
   }
 };

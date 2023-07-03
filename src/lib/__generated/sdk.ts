@@ -171,6 +171,7 @@ export type AssetLinkingCollections = {
   __typename?: 'AssetLinkingCollections';
   componentSeoCollection?: Maybe<ComponentSeoCollection>;
   entryCollection?: Maybe<EntryCollection>;
+  pageExperienceCollection?: Maybe<PageExperienceCollection>;
   pageLandingCollection?: Maybe<PageLandingCollection>;
   pageProductCollection?: Maybe<PageProductCollection>;
 };
@@ -179,6 +180,7 @@ export type AssetLinkingCollections = {
 export type AssetLinkingCollectionsComponentSeoCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<AssetLinkingCollectionsComponentSeoCollectionOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']>;
   skip?: InputMaybe<Scalars['Int']>;
 };
@@ -192,9 +194,19 @@ export type AssetLinkingCollectionsEntryCollectionArgs = {
 };
 
 
+export type AssetLinkingCollectionsPageExperienceCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<AssetLinkingCollectionsPageExperienceCollectionOrder>>>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type AssetLinkingCollectionsPageLandingCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<AssetLinkingCollectionsPageLandingCollectionOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']>;
   skip?: InputMaybe<Scalars['Int']>;
 };
@@ -203,9 +215,88 @@ export type AssetLinkingCollectionsPageLandingCollectionArgs = {
 export type AssetLinkingCollectionsPageProductCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<AssetLinkingCollectionsPageProductCollectionOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']>;
   skip?: InputMaybe<Scalars['Int']>;
 };
+
+export enum AssetLinkingCollectionsComponentSeoCollectionOrder {
+  CanonicalUrlAsc = 'canonicalUrl_ASC',
+  CanonicalUrlDesc = 'canonicalUrl_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  NofollowAsc = 'nofollow_ASC',
+  NofollowDesc = 'nofollow_DESC',
+  NoindexAsc = 'noindex_ASC',
+  NoindexDesc = 'noindex_DESC',
+  PageTitleAsc = 'pageTitle_ASC',
+  PageTitleDesc = 'pageTitle_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+export enum AssetLinkingCollectionsPageExperienceCollectionOrder {
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  NameAsc = 'name_ASC',
+  NameDesc = 'name_DESC',
+  PriceAsc = 'price_ASC',
+  PriceDesc = 'price_DESC',
+  SlugAsc = 'slug_ASC',
+  SlugDesc = 'slug_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+export enum AssetLinkingCollectionsPageLandingCollectionOrder {
+  HeroBannerHeadlineColorAsc = 'heroBannerHeadlineColor_ASC',
+  HeroBannerHeadlineColorDesc = 'heroBannerHeadlineColor_DESC',
+  HeroBannerHeadlineAsc = 'heroBannerHeadline_ASC',
+  HeroBannerHeadlineDesc = 'heroBannerHeadline_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+export enum AssetLinkingCollectionsPageProductCollectionOrder {
+  ExperienceAsc = 'experience_ASC',
+  ExperienceDesc = 'experience_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  NameAsc = 'name_ASC',
+  NameDesc = 'name_DESC',
+  PriceAsc = 'price_ASC',
+  PriceDesc = 'price_DESC',
+  SlugAsc = 'slug_ASC',
+  SlugDesc = 'slug_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
 
 export enum AssetOrder {
   ContentTypeAsc = 'contentType_ASC',
@@ -230,7 +321,7 @@ export enum AssetOrder {
   WidthDesc = 'width_DESC'
 }
 
-/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/componentSeo) */
+/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/componentSeo) */
 export type ComponentSeo = Entry & {
   __typename?: 'ComponentSeo';
   canonicalUrl?: Maybe<Scalars['String']>;
@@ -246,49 +337,49 @@ export type ComponentSeo = Entry & {
 };
 
 
-/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/componentSeo) */
+/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/componentSeo) */
 export type ComponentSeoCanonicalUrlArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
 
-/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/componentSeo) */
+/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/componentSeo) */
 export type ComponentSeoInternalNameArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
 
-/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/componentSeo) */
+/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/componentSeo) */
 export type ComponentSeoLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
 
-/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/componentSeo) */
+/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/componentSeo) */
 export type ComponentSeoNofollowArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
 
-/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/componentSeo) */
+/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/componentSeo) */
 export type ComponentSeoNoindexArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
 
-/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/componentSeo) */
+/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/componentSeo) */
 export type ComponentSeoPageDescriptionArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
 
-/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/componentSeo) */
+/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/componentSeo) */
 export type ComponentSeoPageTitleArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
 
-/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/componentSeo) */
+/** To have SEO-related properties in the pages we render [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/componentSeo) */
 export type ComponentSeoShareImagesCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   locale?: InputMaybe<Scalars['String']>;
@@ -349,6 +440,8 @@ export type ComponentSeoFilter = {
 export type ComponentSeoLinkingCollections = {
   __typename?: 'ComponentSeoLinkingCollections';
   entryCollection?: Maybe<EntryCollection>;
+  pageExperienceCollection?: Maybe<PageExperienceCollection>;
+  pageExperienceOrPageLandingOrPageProductCollection?: Maybe<PageExperienceOrPageLandingOrPageProductCollection>;
   pageLandingCollection?: Maybe<PageLandingCollection>;
   pageProductCollection?: Maybe<PageProductCollection>;
 };
@@ -362,9 +455,27 @@ export type ComponentSeoLinkingCollectionsEntryCollectionArgs = {
 };
 
 
+export type ComponentSeoLinkingCollectionsPageExperienceCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<ComponentSeoLinkingCollectionsPageExperienceCollectionOrder>>>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ComponentSeoLinkingCollectionsPageExperienceOrPageLandingOrPageProductCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type ComponentSeoLinkingCollectionsPageLandingCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<ComponentSeoLinkingCollectionsPageLandingCollectionOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']>;
   skip?: InputMaybe<Scalars['Int']>;
 };
@@ -373,9 +484,67 @@ export type ComponentSeoLinkingCollectionsPageLandingCollectionArgs = {
 export type ComponentSeoLinkingCollectionsPageProductCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<ComponentSeoLinkingCollectionsPageProductCollectionOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']>;
   skip?: InputMaybe<Scalars['Int']>;
 };
+
+export enum ComponentSeoLinkingCollectionsPageExperienceCollectionOrder {
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  NameAsc = 'name_ASC',
+  NameDesc = 'name_DESC',
+  PriceAsc = 'price_ASC',
+  PriceDesc = 'price_DESC',
+  SlugAsc = 'slug_ASC',
+  SlugDesc = 'slug_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+export enum ComponentSeoLinkingCollectionsPageLandingCollectionOrder {
+  HeroBannerHeadlineColorAsc = 'heroBannerHeadlineColor_ASC',
+  HeroBannerHeadlineColorDesc = 'heroBannerHeadlineColor_DESC',
+  HeroBannerHeadlineAsc = 'heroBannerHeadline_ASC',
+  HeroBannerHeadlineDesc = 'heroBannerHeadline_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+export enum ComponentSeoLinkingCollectionsPageProductCollectionOrder {
+  ExperienceAsc = 'experience_ASC',
+  ExperienceDesc = 'experience_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  NameAsc = 'name_ASC',
+  NameDesc = 'name_DESC',
+  PriceAsc = 'price_ASC',
+  PriceDesc = 'price_DESC',
+  SlugAsc = 'slug_ASC',
+  SlugDesc = 'slug_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
 
 export enum ComponentSeoOrder {
   CanonicalUrlAsc = 'canonicalUrl_ASC',
@@ -550,203 +719,63 @@ export type ImageTransformOptions = {
   width?: InputMaybe<Scalars['Dimension']>;
 };
 
-/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageLanding) */
-export type PageLanding = Entry & {
-  __typename?: 'PageLanding';
-  contentfulMetadata: ContentfulMetadata;
-  heroBannerHeadline?: Maybe<Scalars['String']>;
-  heroBannerHeadlineColor?: Maybe<Scalars['String']>;
-  heroBannerImage?: Maybe<Asset>;
-  internalName?: Maybe<Scalars['String']>;
-  linkedFrom?: Maybe<PageLandingLinkingCollections>;
-  productsCollection?: Maybe<PageLandingProductsCollection>;
-  seoFields?: Maybe<ComponentSeo>;
-  sys: Sys;
-};
-
-
-/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageLanding) */
-export type PageLandingHeroBannerHeadlineArgs = {
-  locale?: InputMaybe<Scalars['String']>;
-};
-
-
-/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageLanding) */
-export type PageLandingHeroBannerHeadlineColorArgs = {
-  locale?: InputMaybe<Scalars['String']>;
-};
-
-
-/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageLanding) */
-export type PageLandingHeroBannerImageArgs = {
-  locale?: InputMaybe<Scalars['String']>;
-  preview?: InputMaybe<Scalars['Boolean']>;
-};
-
-
-/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageLanding) */
-export type PageLandingInternalNameArgs = {
-  locale?: InputMaybe<Scalars['String']>;
-};
-
-
-/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageLanding) */
-export type PageLandingLinkedFromArgs = {
-  allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-};
-
-
-/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageLanding) */
-export type PageLandingProductsCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']>;
-  locale?: InputMaybe<Scalars['String']>;
-  preview?: InputMaybe<Scalars['Boolean']>;
-  skip?: InputMaybe<Scalars['Int']>;
-};
-
-
-/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageLanding) */
-export type PageLandingSeoFieldsArgs = {
-  locale?: InputMaybe<Scalars['String']>;
-  preview?: InputMaybe<Scalars['Boolean']>;
-};
-
-export type PageLandingCollection = {
-  __typename?: 'PageLandingCollection';
-  items: Array<Maybe<PageLanding>>;
-  limit: Scalars['Int'];
-  skip: Scalars['Int'];
-  total: Scalars['Int'];
-};
-
-export type PageLandingFilter = {
-  AND?: InputMaybe<Array<InputMaybe<PageLandingFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<PageLandingFilter>>>;
-  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  heroBannerHeadline?: InputMaybe<Scalars['String']>;
-  heroBannerHeadlineColor?: InputMaybe<Scalars['String']>;
-  heroBannerHeadlineColor_contains?: InputMaybe<Scalars['String']>;
-  heroBannerHeadlineColor_exists?: InputMaybe<Scalars['Boolean']>;
-  heroBannerHeadlineColor_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  heroBannerHeadlineColor_not?: InputMaybe<Scalars['String']>;
-  heroBannerHeadlineColor_not_contains?: InputMaybe<Scalars['String']>;
-  heroBannerHeadlineColor_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  heroBannerHeadline_contains?: InputMaybe<Scalars['String']>;
-  heroBannerHeadline_exists?: InputMaybe<Scalars['Boolean']>;
-  heroBannerHeadline_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  heroBannerHeadline_not?: InputMaybe<Scalars['String']>;
-  heroBannerHeadline_not_contains?: InputMaybe<Scalars['String']>;
-  heroBannerHeadline_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  heroBannerImage_exists?: InputMaybe<Scalars['Boolean']>;
-  internalName?: InputMaybe<Scalars['String']>;
-  internalName_contains?: InputMaybe<Scalars['String']>;
-  internalName_exists?: InputMaybe<Scalars['Boolean']>;
-  internalName_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  internalName_not?: InputMaybe<Scalars['String']>;
-  internalName_not_contains?: InputMaybe<Scalars['String']>;
-  internalName_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  products?: InputMaybe<CfPageProductNestedFilter>;
-  productsCollection_exists?: InputMaybe<Scalars['Boolean']>;
-  seoFields?: InputMaybe<CfComponentSeoNestedFilter>;
-  seoFields_exists?: InputMaybe<Scalars['Boolean']>;
-  sys?: InputMaybe<SysFilter>;
-};
-
-export type PageLandingLinkingCollections = {
-  __typename?: 'PageLandingLinkingCollections';
-  entryCollection?: Maybe<EntryCollection>;
-};
-
-
-export type PageLandingLinkingCollectionsEntryCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']>;
-  locale?: InputMaybe<Scalars['String']>;
-  preview?: InputMaybe<Scalars['Boolean']>;
-  skip?: InputMaybe<Scalars['Int']>;
-};
-
-export enum PageLandingOrder {
-  HeroBannerHeadlineColorAsc = 'heroBannerHeadlineColor_ASC',
-  HeroBannerHeadlineColorDesc = 'heroBannerHeadlineColor_DESC',
-  HeroBannerHeadlineAsc = 'heroBannerHeadline_ASC',
-  HeroBannerHeadlineDesc = 'heroBannerHeadline_DESC',
-  InternalNameAsc = 'internalName_ASC',
-  InternalNameDesc = 'internalName_DESC',
-  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
-  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
-  SysIdAsc = 'sys_id_ASC',
-  SysIdDesc = 'sys_id_DESC',
-  SysPublishedAtAsc = 'sys_publishedAt_ASC',
-  SysPublishedAtDesc = 'sys_publishedAt_DESC',
-  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
-}
-
-export type PageLandingProductsCollection = {
-  __typename?: 'PageLandingProductsCollection';
-  items: Array<Maybe<PageProduct>>;
-  limit: Scalars['Int'];
-  skip: Scalars['Int'];
-  total: Scalars['Int'];
-};
-
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProduct = Entry & {
-  __typename?: 'PageProduct';
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperience = Entry & {
+  __typename?: 'PageExperience';
   contentfulMetadata: ContentfulMetadata;
   description?: Maybe<Scalars['String']>;
   featuredProductImage?: Maybe<Asset>;
   internalName?: Maybe<Scalars['String']>;
-  linkedFrom?: Maybe<PageProductLinkingCollections>;
+  linkedFrom?: Maybe<PageExperienceLinkingCollections>;
   name?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['Float']>;
   productImagesCollection?: Maybe<AssetCollection>;
-  relatedProductsCollection?: Maybe<PageProductRelatedProductsCollection>;
+  relatedProductsCollection?: Maybe<PageExperienceRelatedProductsCollection>;
   seoFields?: Maybe<ComponentSeo>;
   slug?: Maybe<Scalars['String']>;
   sys: Sys;
 };
 
 
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProductDescriptionArgs = {
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperienceDescriptionArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
 
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProductFeaturedProductImageArgs = {
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperienceFeaturedProductImageArgs = {
   locale?: InputMaybe<Scalars['String']>;
   preview?: InputMaybe<Scalars['Boolean']>;
 };
 
 
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProductInternalNameArgs = {
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperienceInternalNameArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
 
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProductLinkedFromArgs = {
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperienceLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
 
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProductNameArgs = {
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperienceNameArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
 
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProductPriceArgs = {
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperiencePriceArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
 
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProductProductImagesCollectionArgs = {
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperienceProductImagesCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   locale?: InputMaybe<Scalars['String']>;
   preview?: InputMaybe<Scalars['Boolean']>;
@@ -754,38 +783,41 @@ export type PageProductProductImagesCollectionArgs = {
 };
 
 
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProductRelatedProductsCollectionArgs = {
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperienceRelatedProductsCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<PageExperienceRelatedProductsCollectionOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']>;
   skip?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<PageProductFilter>;
 };
 
 
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProductSeoFieldsArgs = {
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperienceSeoFieldsArgs = {
   locale?: InputMaybe<Scalars['String']>;
   preview?: InputMaybe<Scalars['Boolean']>;
+  where?: InputMaybe<ComponentSeoFilter>;
 };
 
 
-/** To output data for a single product [See type definition](https://app.contentful.com/spaces/a67phq2m6waq/content_types/pageProduct) */
-export type PageProductSlugArgs = {
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperience) */
+export type PageExperienceSlugArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
-export type PageProductCollection = {
-  __typename?: 'PageProductCollection';
-  items: Array<Maybe<PageProduct>>;
+export type PageExperienceCollection = {
+  __typename?: 'PageExperienceCollection';
+  items: Array<Maybe<PageExperience>>;
   limit: Scalars['Int'];
   skip: Scalars['Int'];
   total: Scalars['Int'];
 };
 
-export type PageProductFilter = {
-  AND?: InputMaybe<Array<InputMaybe<PageProductFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<PageProductFilter>>>;
+export type PageExperienceFilter = {
+  AND?: InputMaybe<Array<InputMaybe<PageExperienceFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<PageExperienceFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
   description?: InputMaybe<Scalars['String']>;
   description_contains?: InputMaybe<Scalars['String']>;
@@ -833,9 +865,492 @@ export type PageProductFilter = {
   sys?: InputMaybe<SysFilter>;
 };
 
+export type PageExperienceLinkingCollections = {
+  __typename?: 'PageExperienceLinkingCollections';
+  entryCollection?: Maybe<EntryCollection>;
+  pageLandingCollection?: Maybe<PageLandingCollection>;
+};
+
+
+export type PageExperienceLinkingCollectionsEntryCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type PageExperienceLinkingCollectionsPageLandingCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<PageExperienceLinkingCollectionsPageLandingCollectionOrder>>>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+export enum PageExperienceLinkingCollectionsPageLandingCollectionOrder {
+  HeroBannerHeadlineColorAsc = 'heroBannerHeadlineColor_ASC',
+  HeroBannerHeadlineColorDesc = 'heroBannerHeadlineColor_DESC',
+  HeroBannerHeadlineAsc = 'heroBannerHeadline_ASC',
+  HeroBannerHeadlineDesc = 'heroBannerHeadline_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+/** [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperienceOrPageLandingOrPageProduct) */
+export type PageExperienceOrPageLandingOrPageProduct = Entry & {
+  __typename?: 'PageExperienceOrPageLandingOrPageProduct';
+  contentfulMetadata: ContentfulMetadata;
+  internalName?: Maybe<Scalars['String']>;
+  linkedFrom?: Maybe<PageExperienceOrPageLandingOrPageProductLinkingCollections>;
+  seoFields?: Maybe<ComponentSeo>;
+  sys: Sys;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperienceOrPageLandingOrPageProduct) */
+export type PageExperienceOrPageLandingOrPageProductInternalNameArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperienceOrPageLandingOrPageProduct) */
+export type PageExperienceOrPageLandingOrPageProductLinkedFromArgs = {
+  allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageExperienceOrPageLandingOrPageProduct) */
+export type PageExperienceOrPageLandingOrPageProductSeoFieldsArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  where?: InputMaybe<ComponentSeoFilter>;
+};
+
+export type PageExperienceOrPageLandingOrPageProductCollection = {
+  __typename?: 'PageExperienceOrPageLandingOrPageProductCollection';
+  items: Array<Maybe<PageExperienceOrPageLandingOrPageProduct>>;
+  limit: Scalars['Int'];
+  skip: Scalars['Int'];
+  total: Scalars['Int'];
+};
+
+export type PageExperienceOrPageLandingOrPageProductFilter = {
+  AND?: InputMaybe<Array<InputMaybe<PageExperienceOrPageLandingOrPageProductFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<PageExperienceOrPageLandingOrPageProductFilter>>>;
+  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
+  internalName?: InputMaybe<Scalars['String']>;
+  internalName_contains?: InputMaybe<Scalars['String']>;
+  internalName_exists?: InputMaybe<Scalars['Boolean']>;
+  internalName_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  internalName_not?: InputMaybe<Scalars['String']>;
+  internalName_not_contains?: InputMaybe<Scalars['String']>;
+  internalName_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  seoFields?: InputMaybe<CfComponentSeoNestedFilter>;
+  seoFields_exists?: InputMaybe<Scalars['Boolean']>;
+  sys?: InputMaybe<SysFilter>;
+};
+
+export type PageExperienceOrPageLandingOrPageProductLinkingCollections = {
+  __typename?: 'PageExperienceOrPageLandingOrPageProductLinkingCollections';
+  entryCollection?: Maybe<EntryCollection>;
+};
+
+
+export type PageExperienceOrPageLandingOrPageProductLinkingCollectionsEntryCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+export enum PageExperienceOrder {
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  NameAsc = 'name_ASC',
+  NameDesc = 'name_DESC',
+  PriceAsc = 'price_ASC',
+  PriceDesc = 'price_DESC',
+  SlugAsc = 'slug_ASC',
+  SlugDesc = 'slug_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+export type PageExperienceRelatedProductsCollection = {
+  __typename?: 'PageExperienceRelatedProductsCollection';
+  items: Array<Maybe<PageProduct>>;
+  limit: Scalars['Int'];
+  skip: Scalars['Int'];
+  total: Scalars['Int'];
+};
+
+export enum PageExperienceRelatedProductsCollectionOrder {
+  ExperienceAsc = 'experience_ASC',
+  ExperienceDesc = 'experience_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  NameAsc = 'name_ASC',
+  NameDesc = 'name_DESC',
+  PriceAsc = 'price_ASC',
+  PriceDesc = 'price_DESC',
+  SlugAsc = 'slug_ASC',
+  SlugDesc = 'slug_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageLanding) */
+export type PageLanding = Entry & {
+  __typename?: 'PageLanding';
+  contentfulMetadata: ContentfulMetadata;
+  heroBannerHeadline?: Maybe<Scalars['String']>;
+  heroBannerHeadlineColor?: Maybe<Scalars['String']>;
+  heroBannerImage?: Maybe<Asset>;
+  internalName?: Maybe<Scalars['String']>;
+  linkedFrom?: Maybe<PageLandingLinkingCollections>;
+  productsCollection?: Maybe<PageLandingProductsCollection>;
+  seoFields?: Maybe<ComponentSeo>;
+  sys: Sys;
+};
+
+
+/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageLanding) */
+export type PageLandingHeroBannerHeadlineArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageLanding) */
+export type PageLandingHeroBannerHeadlineColorArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageLanding) */
+export type PageLandingHeroBannerImageArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageLanding) */
+export type PageLandingInternalNameArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageLanding) */
+export type PageLandingLinkedFromArgs = {
+  allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+
+/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageLanding) */
+export type PageLandingProductsCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<PageExperienceOrPageLandingOrPageProductFilter>;
+};
+
+
+/** To have an entry point for the app [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageLanding) */
+export type PageLandingSeoFieldsArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  where?: InputMaybe<ComponentSeoFilter>;
+};
+
+export type PageLandingCollection = {
+  __typename?: 'PageLandingCollection';
+  items: Array<Maybe<PageLanding>>;
+  limit: Scalars['Int'];
+  skip: Scalars['Int'];
+  total: Scalars['Int'];
+};
+
+export type PageLandingFilter = {
+  AND?: InputMaybe<Array<InputMaybe<PageLandingFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<PageLandingFilter>>>;
+  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
+  heroBannerHeadline?: InputMaybe<Scalars['String']>;
+  heroBannerHeadlineColor?: InputMaybe<Scalars['String']>;
+  heroBannerHeadlineColor_contains?: InputMaybe<Scalars['String']>;
+  heroBannerHeadlineColor_exists?: InputMaybe<Scalars['Boolean']>;
+  heroBannerHeadlineColor_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  heroBannerHeadlineColor_not?: InputMaybe<Scalars['String']>;
+  heroBannerHeadlineColor_not_contains?: InputMaybe<Scalars['String']>;
+  heroBannerHeadlineColor_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  heroBannerHeadline_contains?: InputMaybe<Scalars['String']>;
+  heroBannerHeadline_exists?: InputMaybe<Scalars['Boolean']>;
+  heroBannerHeadline_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  heroBannerHeadline_not?: InputMaybe<Scalars['String']>;
+  heroBannerHeadline_not_contains?: InputMaybe<Scalars['String']>;
+  heroBannerHeadline_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  heroBannerImage_exists?: InputMaybe<Scalars['Boolean']>;
+  internalName?: InputMaybe<Scalars['String']>;
+  internalName_contains?: InputMaybe<Scalars['String']>;
+  internalName_exists?: InputMaybe<Scalars['Boolean']>;
+  internalName_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  internalName_not?: InputMaybe<Scalars['String']>;
+  internalName_not_contains?: InputMaybe<Scalars['String']>;
+  internalName_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  products?: InputMaybe<CfPageExperienceOrPageLandingOrPageProductNestedFilter>;
+  productsCollection_exists?: InputMaybe<Scalars['Boolean']>;
+  seoFields?: InputMaybe<CfComponentSeoNestedFilter>;
+  seoFields_exists?: InputMaybe<Scalars['Boolean']>;
+  sys?: InputMaybe<SysFilter>;
+};
+
+export type PageLandingLinkingCollections = {
+  __typename?: 'PageLandingLinkingCollections';
+  entryCollection?: Maybe<EntryCollection>;
+  pageLandingCollection?: Maybe<PageLandingCollection>;
+};
+
+
+export type PageLandingLinkingCollectionsEntryCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type PageLandingLinkingCollectionsPageLandingCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<PageLandingLinkingCollectionsPageLandingCollectionOrder>>>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+export enum PageLandingLinkingCollectionsPageLandingCollectionOrder {
+  HeroBannerHeadlineColorAsc = 'heroBannerHeadlineColor_ASC',
+  HeroBannerHeadlineColorDesc = 'heroBannerHeadlineColor_DESC',
+  HeroBannerHeadlineAsc = 'heroBannerHeadline_ASC',
+  HeroBannerHeadlineDesc = 'heroBannerHeadline_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+export enum PageLandingOrder {
+  HeroBannerHeadlineColorAsc = 'heroBannerHeadlineColor_ASC',
+  HeroBannerHeadlineColorDesc = 'heroBannerHeadlineColor_DESC',
+  HeroBannerHeadlineAsc = 'heroBannerHeadline_ASC',
+  HeroBannerHeadlineDesc = 'heroBannerHeadline_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+export type PageLandingProductsCollection = {
+  __typename?: 'PageLandingProductsCollection';
+  items: Array<Maybe<PageLandingProductsItem>>;
+  limit: Scalars['Int'];
+  skip: Scalars['Int'];
+  total: Scalars['Int'];
+};
+
+export type PageLandingProductsItem = PageExperience | PageLanding | PageProduct;
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProduct = Entry & {
+  __typename?: 'PageProduct';
+  contentfulMetadata: ContentfulMetadata;
+  description?: Maybe<Scalars['String']>;
+  experience?: Maybe<Scalars['Boolean']>;
+  featuredProductImage?: Maybe<Asset>;
+  internalName?: Maybe<Scalars['String']>;
+  linkedFrom?: Maybe<PageProductLinkingCollections>;
+  name?: Maybe<Scalars['String']>;
+  price?: Maybe<Scalars['Float']>;
+  productImagesCollection?: Maybe<AssetCollection>;
+  relatedProductsCollection?: Maybe<PageProductRelatedProductsCollection>;
+  seoFields?: Maybe<ComponentSeo>;
+  slug?: Maybe<Scalars['String']>;
+  sys: Sys;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductDescriptionArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductExperienceArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductFeaturedProductImageArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductInternalNameArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductLinkedFromArgs = {
+  allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductNameArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductPriceArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductProductImagesCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductRelatedProductsCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<PageProductRelatedProductsCollectionOrder>>>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<PageProductFilter>;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductSeoFieldsArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  where?: InputMaybe<ComponentSeoFilter>;
+};
+
+
+/** To output data for a single product [See type definition](https://app.contentful.com/spaces/cx8wzveoj6vz/content_types/pageProduct) */
+export type PageProductSlugArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+export type PageProductCollection = {
+  __typename?: 'PageProductCollection';
+  items: Array<Maybe<PageProduct>>;
+  limit: Scalars['Int'];
+  skip: Scalars['Int'];
+  total: Scalars['Int'];
+};
+
+export type PageProductFilter = {
+  AND?: InputMaybe<Array<InputMaybe<PageProductFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<PageProductFilter>>>;
+  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
+  description?: InputMaybe<Scalars['String']>;
+  description_contains?: InputMaybe<Scalars['String']>;
+  description_exists?: InputMaybe<Scalars['Boolean']>;
+  description_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  description_not?: InputMaybe<Scalars['String']>;
+  description_not_contains?: InputMaybe<Scalars['String']>;
+  description_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  experience?: InputMaybe<Scalars['Boolean']>;
+  experience_exists?: InputMaybe<Scalars['Boolean']>;
+  experience_not?: InputMaybe<Scalars['Boolean']>;
+  featuredProductImage_exists?: InputMaybe<Scalars['Boolean']>;
+  internalName?: InputMaybe<Scalars['String']>;
+  internalName_contains?: InputMaybe<Scalars['String']>;
+  internalName_exists?: InputMaybe<Scalars['Boolean']>;
+  internalName_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  internalName_not?: InputMaybe<Scalars['String']>;
+  internalName_not_contains?: InputMaybe<Scalars['String']>;
+  internalName_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  name?: InputMaybe<Scalars['String']>;
+  name_contains?: InputMaybe<Scalars['String']>;
+  name_exists?: InputMaybe<Scalars['Boolean']>;
+  name_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  name_not?: InputMaybe<Scalars['String']>;
+  name_not_contains?: InputMaybe<Scalars['String']>;
+  name_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  price?: InputMaybe<Scalars['Float']>;
+  price_exists?: InputMaybe<Scalars['Boolean']>;
+  price_gt?: InputMaybe<Scalars['Float']>;
+  price_gte?: InputMaybe<Scalars['Float']>;
+  price_in?: InputMaybe<Array<InputMaybe<Scalars['Float']>>>;
+  price_lt?: InputMaybe<Scalars['Float']>;
+  price_lte?: InputMaybe<Scalars['Float']>;
+  price_not?: InputMaybe<Scalars['Float']>;
+  price_not_in?: InputMaybe<Array<InputMaybe<Scalars['Float']>>>;
+  productImagesCollection_exists?: InputMaybe<Scalars['Boolean']>;
+  relatedProducts?: InputMaybe<CfPageProductNestedFilter>;
+  relatedProductsCollection_exists?: InputMaybe<Scalars['Boolean']>;
+  seoFields?: InputMaybe<CfComponentSeoNestedFilter>;
+  seoFields_exists?: InputMaybe<Scalars['Boolean']>;
+  slug?: InputMaybe<Scalars['String']>;
+  slug_contains?: InputMaybe<Scalars['String']>;
+  slug_exists?: InputMaybe<Scalars['Boolean']>;
+  slug_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  slug_not?: InputMaybe<Scalars['String']>;
+  slug_not_contains?: InputMaybe<Scalars['String']>;
+  slug_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  sys?: InputMaybe<SysFilter>;
+};
+
 export type PageProductLinkingCollections = {
   __typename?: 'PageProductLinkingCollections';
   entryCollection?: Maybe<EntryCollection>;
+  pageExperienceCollection?: Maybe<PageExperienceCollection>;
   pageLandingCollection?: Maybe<PageLandingCollection>;
   pageProductCollection?: Maybe<PageProductCollection>;
 };
@@ -849,9 +1364,19 @@ export type PageProductLinkingCollectionsEntryCollectionArgs = {
 };
 
 
+export type PageProductLinkingCollectionsPageExperienceCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<PageProductLinkingCollectionsPageExperienceCollectionOrder>>>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type PageProductLinkingCollectionsPageLandingCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<PageProductLinkingCollectionsPageLandingCollectionOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']>;
   skip?: InputMaybe<Scalars['Int']>;
 };
@@ -860,11 +1385,71 @@ export type PageProductLinkingCollectionsPageLandingCollectionArgs = {
 export type PageProductLinkingCollectionsPageProductCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']>;
   locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<PageProductLinkingCollectionsPageProductCollectionOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']>;
   skip?: InputMaybe<Scalars['Int']>;
 };
 
+export enum PageProductLinkingCollectionsPageExperienceCollectionOrder {
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  NameAsc = 'name_ASC',
+  NameDesc = 'name_DESC',
+  PriceAsc = 'price_ASC',
+  PriceDesc = 'price_DESC',
+  SlugAsc = 'slug_ASC',
+  SlugDesc = 'slug_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+export enum PageProductLinkingCollectionsPageLandingCollectionOrder {
+  HeroBannerHeadlineColorAsc = 'heroBannerHeadlineColor_ASC',
+  HeroBannerHeadlineColorDesc = 'heroBannerHeadlineColor_DESC',
+  HeroBannerHeadlineAsc = 'heroBannerHeadline_ASC',
+  HeroBannerHeadlineDesc = 'heroBannerHeadline_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
+export enum PageProductLinkingCollectionsPageProductCollectionOrder {
+  ExperienceAsc = 'experience_ASC',
+  ExperienceDesc = 'experience_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  NameAsc = 'name_ASC',
+  NameDesc = 'name_DESC',
+  PriceAsc = 'price_ASC',
+  PriceDesc = 'price_DESC',
+  SlugAsc = 'slug_ASC',
+  SlugDesc = 'slug_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
 export enum PageProductOrder {
+  ExperienceAsc = 'experience_ASC',
+  ExperienceDesc = 'experience_DESC',
   InternalNameAsc = 'internalName_ASC',
   InternalNameDesc = 'internalName_DESC',
   NameAsc = 'name_ASC',
@@ -891,6 +1476,27 @@ export type PageProductRelatedProductsCollection = {
   total: Scalars['Int'];
 };
 
+export enum PageProductRelatedProductsCollectionOrder {
+  ExperienceAsc = 'experience_ASC',
+  ExperienceDesc = 'experience_DESC',
+  InternalNameAsc = 'internalName_ASC',
+  InternalNameDesc = 'internalName_DESC',
+  NameAsc = 'name_ASC',
+  NameDesc = 'name_DESC',
+  PriceAsc = 'price_ASC',
+  PriceDesc = 'price_DESC',
+  SlugAsc = 'slug_ASC',
+  SlugDesc = 'slug_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+}
+
 export type Query = {
   __typename?: 'Query';
   asset?: Maybe<Asset>;
@@ -898,6 +1504,10 @@ export type Query = {
   componentSeo?: Maybe<ComponentSeo>;
   componentSeoCollection?: Maybe<ComponentSeoCollection>;
   entryCollection?: Maybe<EntryCollection>;
+  pageExperience?: Maybe<PageExperience>;
+  pageExperienceCollection?: Maybe<PageExperienceCollection>;
+  pageExperienceOrPageLandingOrPageProduct?: Maybe<PageExperienceOrPageLandingOrPageProduct>;
+  pageExperienceOrPageLandingOrPageProductCollection?: Maybe<PageExperienceOrPageLandingOrPageProductCollection>;
   pageLanding?: Maybe<PageLanding>;
   pageLandingCollection?: Maybe<PageLandingCollection>;
   pageProduct?: Maybe<PageProduct>;
@@ -946,6 +1556,39 @@ export type QueryEntryCollectionArgs = {
   preview?: InputMaybe<Scalars['Boolean']>;
   skip?: InputMaybe<Scalars['Int']>;
   where?: InputMaybe<EntryFilter>;
+};
+
+
+export type QueryPageExperienceArgs = {
+  id: Scalars['String'];
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+export type QueryPageExperienceCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  order?: InputMaybe<Array<InputMaybe<PageExperienceOrder>>>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<PageExperienceFilter>;
+};
+
+
+export type QueryPageExperienceOrPageLandingOrPageProductArgs = {
+  id: Scalars['String'];
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+export type QueryPageExperienceOrPageLandingOrPageProductCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+  skip?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<PageExperienceOrPageLandingOrPageProductFilter>;
 };
 
 
@@ -1071,6 +1714,21 @@ export type CfComponentSeoNestedFilter = {
   sys?: InputMaybe<SysFilter>;
 };
 
+export type CfPageExperienceOrPageLandingOrPageProductNestedFilter = {
+  AND?: InputMaybe<Array<InputMaybe<CfPageExperienceOrPageLandingOrPageProductNestedFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<CfPageExperienceOrPageLandingOrPageProductNestedFilter>>>;
+  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
+  internalName?: InputMaybe<Scalars['String']>;
+  internalName_contains?: InputMaybe<Scalars['String']>;
+  internalName_exists?: InputMaybe<Scalars['Boolean']>;
+  internalName_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  internalName_not?: InputMaybe<Scalars['String']>;
+  internalName_not_contains?: InputMaybe<Scalars['String']>;
+  internalName_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  seoFields_exists?: InputMaybe<Scalars['Boolean']>;
+  sys?: InputMaybe<SysFilter>;
+};
+
 export type CfPageProductNestedFilter = {
   AND?: InputMaybe<Array<InputMaybe<CfPageProductNestedFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<CfPageProductNestedFilter>>>;
@@ -1082,6 +1740,9 @@ export type CfPageProductNestedFilter = {
   description_not?: InputMaybe<Scalars['String']>;
   description_not_contains?: InputMaybe<Scalars['String']>;
   description_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  experience?: InputMaybe<Scalars['Boolean']>;
+  experience_exists?: InputMaybe<Scalars['Boolean']>;
+  experience_not?: InputMaybe<Scalars['Boolean']>;
   featuredProductImage_exists?: InputMaybe<Scalars['Boolean']>;
   internalName?: InputMaybe<Scalars['String']>;
   internalName_contains?: InputMaybe<Scalars['String']>;
@@ -1119,6 +1780,17 @@ export type CfPageProductNestedFilter = {
   sys?: InputMaybe<SysFilter>;
 };
 
+export type PageProductCollectionQueryVariables = Exact<{
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+}>;
+
+
+export type PageProductCollectionQuery = { __typename?: 'Query', pageProductCollection?: { __typename?: 'PageProductCollection', items: Array<(
+      { __typename?: 'PageProduct' }
+      & PageProductFieldsFragment
+    ) | null> } | null };
+
 export type ImageFieldsFragment = { __typename: 'Asset', title?: string | null, description?: string | null, width?: number | null, height?: number | null, url?: string | null, contentType?: string | null, sys: { __typename?: 'Sys', id: string } };
 
 export type PageLandingFieldsFragment = { __typename: 'PageLanding', internalName?: string | null, heroBannerHeadline?: string | null, heroBannerHeadlineColor?: string | null, sys: { __typename?: 'Sys', id: string, spaceId: string }, seoFields?: (
@@ -1127,7 +1799,7 @@ export type PageLandingFieldsFragment = { __typename: 'PageLanding', internalNam
   ) | null, heroBannerImage?: (
     { __typename?: 'Asset' }
     & ImageFieldsFragment
-  ) | null, productsCollection?: { __typename?: 'PageLandingProductsCollection', items: Array<(
+  ) | null, productsCollection?: { __typename?: 'PageLandingProductsCollection', items: Array<{ __typename?: 'PageExperience' } | { __typename?: 'PageLanding' } | (
       { __typename?: 'PageProduct' }
       & PageProductFieldsFragment
     ) | null> } | null };
@@ -1154,7 +1826,7 @@ export type PageLandingCollectionQuery = { __typename?: 'Query', pageLandingColl
       & PageLandingFieldsFragment
     ) | null> } | null };
 
-export type BasePageProductFieldsFragment = { __typename: 'PageProduct', internalName?: string | null, slug?: string | null, name?: string | null, description?: string | null, price?: number | null, sys: { __typename?: 'Sys', id: string, spaceId: string }, seoFields?: (
+export type BasePageProductFieldsFragment = { __typename: 'PageProduct', internalName?: string | null, experience?: boolean | null, slug?: string | null, name?: string | null, description?: string | null, price?: number | null, sys: { __typename?: 'Sys', id: string, spaceId: string }, seoFields?: (
     { __typename?: 'ComponentSeo' }
     & SeoFieldsFragment
   ) | null, featuredProductImage?: (
@@ -1181,17 +1853,6 @@ export type PageProductQueryVariables = Exact<{
 
 
 export type PageProductQuery = { __typename?: 'Query', pageProductCollection?: { __typename?: 'PageProductCollection', items: Array<(
-      { __typename?: 'PageProduct' }
-      & PageProductFieldsFragment
-    ) | null> } | null };
-
-export type PageProductCollectionQueryVariables = Exact<{
-  locale?: InputMaybe<Scalars['String']>;
-  preview?: InputMaybe<Scalars['Boolean']>;
-}>;
-
-
-export type PageProductCollectionQuery = { __typename?: 'Query', pageProductCollection?: { __typename?: 'PageProductCollection', items: Array<(
       { __typename?: 'PageProduct' }
       & PageProductFieldsFragment
     ) | null> } | null };
@@ -1250,6 +1911,7 @@ export const BasePageProductFieldsFragmentDoc = gql`
     spaceId
   }
   internalName
+  experience
   slug
   seoFields {
     ...SeoFields
@@ -1260,7 +1922,7 @@ export const BasePageProductFieldsFragmentDoc = gql`
   featuredProductImage {
     ...ImageFields
   }
-  productImagesCollection(limit: 6) {
+  productImagesCollection(limit: 15) {
     items {
       ...ImageFields
     }
@@ -1293,7 +1955,7 @@ export const PageLandingFieldsFragmentDoc = gql`
   heroBannerImage {
     ...ImageFields
   }
-  productsCollection(limit: 6) {
+  productsCollection(limit: 15) {
     items {
       ...PageProductFields
     }
@@ -1319,6 +1981,18 @@ export const SitemapPagesFieldsFragmentDoc = gql`
   }
 }
     `;
+export const PageProductCollectionDocument = gql`
+    query pageProductCollection($locale: String, $preview: Boolean) {
+  pageProductCollection(limit: 100, locale: $locale, preview: $preview) {
+    items {
+      ...PageProductFields
+    }
+  }
+}
+    ${PageProductFieldsFragmentDoc}
+${BasePageProductFieldsFragmentDoc}
+${SeoFieldsFragmentDoc}
+${ImageFieldsFragmentDoc}`;
 export const PageLandingDocument = gql`
     query pageLanding($locale: String, $preview: Boolean) {
   pageLandingCollection(limit: 1, locale: $locale, preview: $preview) {
@@ -1362,18 +2036,6 @@ export const PageProductDocument = gql`
 ${BasePageProductFieldsFragmentDoc}
 ${SeoFieldsFragmentDoc}
 ${ImageFieldsFragmentDoc}`;
-export const PageProductCollectionDocument = gql`
-    query pageProductCollection($locale: String, $preview: Boolean) {
-  pageProductCollection(limit: 100, locale: $locale, preview: $preview) {
-    items {
-      ...PageProductFields
-    }
-  }
-}
-    ${PageProductFieldsFragmentDoc}
-${BasePageProductFieldsFragmentDoc}
-${SeoFieldsFragmentDoc}
-${ImageFieldsFragmentDoc}`;
 export const SitemapPagesDocument = gql`
     query sitemapPages($locale: String!) {
   ...sitemapPagesFields
@@ -1387,6 +2049,9 @@ const defaultWrapper: SdkFunctionWrapper = (action, _operationName, _operationTy
 
 export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
   return {
+    pageProductCollection(variables?: PageProductCollectionQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<PageProductCollectionQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<PageProductCollectionQuery>(PageProductCollectionDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'pageProductCollection', 'query');
+    },
     pageLanding(variables?: PageLandingQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<PageLandingQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<PageLandingQuery>(PageLandingDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'pageLanding', 'query');
     },
@@ -1395,9 +2060,6 @@ export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = 
     },
     pageProduct(variables: PageProductQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<PageProductQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<PageProductQuery>(PageProductDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'pageProduct', 'query');
-    },
-    pageProductCollection(variables?: PageProductCollectionQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<PageProductCollectionQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<PageProductCollectionQuery>(PageProductCollectionDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'pageProductCollection', 'query');
     },
     sitemapPages(variables: SitemapPagesQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<SitemapPagesQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<SitemapPagesQuery>(SitemapPagesDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'sitemapPages', 'query');

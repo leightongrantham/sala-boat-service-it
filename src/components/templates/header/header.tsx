@@ -10,7 +10,6 @@ export const HEADER_HEIGHT = 60;
 export const Header = (props: BoxProps) => {
   const { t } = useTranslation();
   const route = useRouter();
-
   return (
     <Flex
       as="nav"
@@ -22,9 +21,10 @@ export const Header = (props: BoxProps) => {
       justifyContent={'center'}
       zIndex="2"
       border={'none !important'}
+      flexDirection="column"
       {...props}>
       <Link href="/" title={t('common.homepage')}>
-        {route.pathname === '/' ? (
+        {route.pathname === '/' || route.pathname === '/experiences' ? (
           <h1 style={{ fontSize: '1.5rem', fontFamily: `../../../pages/utils/fonts/../../../pages/utils/fonts/CrimsonText-regular.ttf !important`, textTransform: 'uppercase', letterSpacing: '5px', marginTop: '2rem' }}>
             Salò Boat Service
           </h1>
@@ -35,14 +35,15 @@ export const Header = (props: BoxProps) => {
         )}
 
 
-        {/*<h2>Our Fleet</h2>*/}
-
         <Box
           display={{ base: 'block', md: 'none', lg: 'none' }}
           title={t('common.logoImageAltText')}
         />
       </Link>
-      {/*<Link href="/experiences/">Our Experiences</Link>*/}
+      <div>
+        <Link className={route.pathname == "/" ? "active" : ""} href="/" style={{ margin: "10px" }}>Our Fleet</Link>
+        <Link className={route.pathname == "/experiences" ? "active" : ""} href={'/experiences/'}>Our Experiences</Link>
+      </div>
       <LanguageSelector />
     </Flex>
   );

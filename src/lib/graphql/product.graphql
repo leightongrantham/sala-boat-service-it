@@ -5,6 +5,7 @@ fragment BasePageProductFields on PageProduct {
     spaceId
   }
   internalName
+  experience
   slug
   seoFields {
     ...SeoFields
@@ -15,7 +16,7 @@ fragment BasePageProductFields on PageProduct {
   featuredProductImage {
     ...ImageFields
   }
-  productImagesCollection(limit: 6) {
+  productImagesCollection(limit: 15) {
     items {
       ...ImageFields
     }
