@@ -26,37 +26,41 @@ export const Header = (props: BoxProps) => {
       <Link href="/" title={t('common.homepage')}>
         {route.pathname === '/' || route.pathname === '/experiences' ? (
           <h1 style={{
-            fontSize: '1.5rem',
+            fontSize: '2rem',
             fontFamily: `../../../pages/utils/fonts/../../../pages/utils/fonts/CrimsonText-regular.ttf !important`,
             textTransform: 'uppercase',
             letterSpacing: '5px',
-            marginTop: '2rem'
+            marginTop: '7rem'
           }}>
             Salò Boat Service
           </h1>
         ) : (
           <h1 style={{
-            fontSize: '1.5rem',
+            fontSize: '2rem',
             fontFamily: `../../../pages/utils/fonts/../../../pages/utils/fonts/CrimsonText-regular.ttf !important`,
             textTransform: 'uppercase',
             letterSpacing: '5px',
             color: 'black',
-            marginTop: '2rem'
+            marginTop: '7rem'
           }}>
             Salò Boat Service
           </h1>
         )}
-
-
         <Box
           display={{ base: 'block', md: 'none', lg: 'none' }}
           title={t('common.logoImageAltText')}
         />
       </Link>
-      <div>
+      <div style={{fontSize: '1.5rem'}}>
         <Link className={route.pathname == '/' ? 'active' : ''} href="/" style={{ margin: '10px' }}>Our Fleet</Link>
         <Link className={route.pathname == '/experiences' ? 'active' : ''} href={'/experiences/'}>Our Experiences</Link>
       </div>
+      <p style={{fontStyle: 'italic', marginTop: '15px'}}>
+        Passion & Experience
+      </p>
+      <h4 style={{fontStyle: 'italic'}}>
+        Est. 1930
+      </h4>
       <LanguageSelector/>
     </Flex>
   );
