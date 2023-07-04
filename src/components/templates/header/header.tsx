@@ -13,12 +13,12 @@ export const Header = (props: BoxProps) => {
   return (
     <Flex
       as="nav"
-      align="center"
+      align="left"
       pl={{ base: 4, md: 12, lg: 12 }}
       pr={{ base: 4, md: 12, lg: 12 }}
       height={`${HEADER_HEIGHT}px`}
       color={'#FFFFFF'}
-      justifyContent={'center'}
+      justifyContent={'left'}
       zIndex="2"
       border={'none !important'}
       flexDirection="column"
@@ -52,7 +52,7 @@ export const Header = (props: BoxProps) => {
         />
       </Link>
       <div style={{fontSize: '1.5rem'}}>
-        <Link className={route.pathname == '/' ? 'active' : ''} href="/" style={{ margin: '10px' }}>Our Fleet</Link>
+        <Link className={route.pathname == '/' ? 'active' : ''} href="/" style={{ margin: '0 10px 0 0' }}>Our Fleet</Link>
         <Link className={route.pathname == '/experiences' ? 'active' : ''} href={'/experiences/'}>Our Experiences</Link>
       </div>
       <p style={{fontStyle: 'italic', marginTop: '15px'}}>
