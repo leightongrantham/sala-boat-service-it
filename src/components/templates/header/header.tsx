@@ -31,7 +31,6 @@ export const Header = (props: BoxProps) => {
             fontFamily: `../../../pages/utils/fonts/../../../pages/utils/fonts/CrimsonText-regular.ttf !important`,
             textTransform: 'uppercase',
             letterSpacing: '5px',
-            marginTop: '7rem'
           }}>
             Salò Boat Service
           </h1>
