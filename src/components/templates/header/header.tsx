@@ -16,6 +16,7 @@ export const Header = (props: BoxProps) => {
       align="left"
       pl={{ base: 4, md: 12, lg: 12 }}
       pr={{ base: 4, md: 12, lg: 12 }}
+      p="30px"
       height={`${HEADER_HEIGHT}px`}
       color={'#FFFFFF'}
       justifyContent={'left'}
