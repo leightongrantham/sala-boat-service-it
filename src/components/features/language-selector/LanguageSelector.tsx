@@ -11,7 +11,7 @@ export const LanguageSelector = () => {
       </Box>
 
       <Box display={{ base: 'block', md: 'none', lg: 'none' }}>
-        {/*<LanguageSelectorMobile displayName={displayName} localeName={localeName} />*/}
+        {/*<LanguageSelectorMobile displayName={displayName} localeName={localeName} />/*/}
       </Box>
     </>
   ) : null;
