@@ -57,15 +57,15 @@ export const Header = (props: BoxProps) => {
           title={t('common.logoImageAltText')}
         />
       </Link>
-      {route.pathname === '/' &&
+      {route.pathname === '/' ? (
         <div style={{
           marginTop: '5vw',
           marginLeft: '5vw'
         }}>
           <div className={`${crimson.className} !important`} style={{ fontSize: '1.5rem' }}>
-            <Link className={route.pathname == '/' ? 'active' : ''} href="/" style={{ margin: '0 10px 0 0' }}>Our
+            <Link className={route.pathname === '/' ? 'active' : ''} href="/" style={{ margin: '0 10px 0 0' }}>Our
               Fleet</Link>
-            <Link className={route.pathname == '/experiences' ? 'active' : ''} href={'/experiences/'}>Our
+            <Link className={route.pathname === '/experiences' ? 'active' : ''} href={'/experiences/'}>Our
               Experiences</Link>
           </div>
           <p style={{ fontStyle: 'italic', marginTop: '15px' }}>
@@ -76,7 +76,7 @@ export const Header = (props: BoxProps) => {
           </h4>
           <LanguageSelector/>
         </div>
-      }
+      ) : ( <div /> )}
     </Flex>
   );
 };
