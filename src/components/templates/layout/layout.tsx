@@ -1,4 +1,5 @@
 import { Flex, useTheme } from '@chakra-ui/react';
+import { Crimson_Pro } from '@next/font/google';
 import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
 
@@ -8,6 +9,8 @@ import { Header } from '../header';
 interface LayoutPropsInterface {
   children: ReactNode;
 }
+
+const crimson = Crimson_Pro({ subsets: ['latin'] })
 
 export const Layout = ({ children }: LayoutPropsInterface) => {
   const router = useRouter();
@@ -21,7 +24,7 @@ export const Layout = ({ children }: LayoutPropsInterface) => {
         borderBottom={isHomePage ? '' : '1px'}
         borderColor={isHomePage ? null : theme.f36.gray200}
       />
-      <Flex flexGrow="1" flexDirection="column" width="100%" as="main" pb={{ base: 8, lg: 12 }}>
+      <Flex className={crimson.className} flexGrow="1" flexDirection="column" width="100%" as="main" pb={{ base: 8, lg: 12 }}>
         {children}
       </Flex>
       <Footer />
